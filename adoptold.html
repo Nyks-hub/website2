@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Adopt a dog  Pet Rescue and Rehome Management System</title>
+    <style>
+        body {
+            background-color: rgba(35, 164, 239, 0.212);
+        }
+
+
+        .th1{            
+
+            padding: 10px;
+            font-size:xx-large;
+            border-radius: 20px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .serch{
+            font-family: "Segoe UI Semibold";
+            padding: 0px;
+            margin: 0px;
+            font-size: x-large;
+            box-decoration-break: unset;
+
+        }
+        #sb1{
+            background-color:#e6e8ec;
+            border: none;
+            margin-right: 1px;
+            width:40%;
+            border-radius: 30px;
+            font-size: large;
+            padding: 10px;
+        }
+
+        #sb2,#sb3,#sb4,#sb5{
+            background-color:#ffffff;
+            border: none;
+            margin-right: 1px;
+            width:2%;
+            border-radius: 30px;
+            font-size: large;
+            padding: 10px;
+        }  
+        .tex{
+            color: rgb(255, 255, 255);
+            padding:10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin:0px;
+            background-color: #28a745;
+            border-radius: 30px;
+            float: right;
+            font-size: large;
+        }
+        .tex:hover{
+            cursor: pointer;
+                background-color: #218838;
+        }
+        .it1:hover{
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            
+        }
+        input:focus {
+         outline: none;
+        }
+     .topic{
+        font-family:"Segoe UI Semibold";
+        text-align: center;
+     }
+     .it1{
+        display:inline-block;
+        width:150px;
+        margin: 10px;
+        margin-top: 30px;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+     }
+        .it1 img{
+            width: 150px;;
+
+        }
+     
+    </style>
+    <script>
+
+        function specbox1(){
+            document.getElementById("sb2").style.backgroundColor='#fff';
+            document.getElementById("sb3").style.backgroundColor='#fff';
+            document.getElementById("sb4").style.backgroundColor='#fff';
+            document.getElementById("sb5").style.backgroundColor='#fff';
+
+            document.getElementById("sb2").style.width="2%";
+            document.getElementById("sb3").style.width="2%";
+            document.getElementById("sb4").style.width="2%";
+            document.getElementById("sb5").style.width="2%";
+            document.getElementById("sb1").style.width="40%";
+            document.getElementById("sb1").style.border="1";
+            document.getElementById("sb1").style.backgroundColor='#e6e8ec';
+
+        }
+        
+        function brandbox1(){
+            document.getElementById("sb1").style.backgroundColor='#fff';
+            document.getElementById("sb3").style.backgroundColor='#fff';
+            document.getElementById("sb4").style.backgroundColor='#fff';
+            document.getElementById("sb5").style.backgroundColor='#fff';
+            document.getElementById("sb1").style.width="2%";
+            document.getElementById("sb3").style.width="2%";
+            document.getElementById("sb4").style.width="2%";
+            document.getElementById("sb5").style.width="2%";
+            document.getElementById("sb2").style.width="40%";
+            document.getElementById("sb2").style.backgroundColor='#e6e8ec';
+
+        }
+       
+        function agebox1(){
+            document.getElementById("sb1").style.backgroundColor='#fff';
+            document.getElementById("sb2").style.backgroundColor='#fff';
+            document.getElementById("sb4").style.backgroundColor='#fff';
+            document.getElementById("sb5").style.backgroundColor='#fff';
+            document.getElementById("sb1").style.width="2%";
+            document.getElementById("sb2").style.width="2%";
+            document.getElementById("sb4").style.width="2%";
+            document.getElementById("sb5").style.width="2%";
+            document.getElementById("sb3").style.width="40%";
+            document.getElementById("sb3").style.backgroundColor='#e6e8ec';
+
+        }
+        
+        function genderbox1(){
+            document.getElementById("sb1").style.backgroundColor='#fff';
+            document.getElementById("sb2").style.backgroundColor='#fff';
+            document.getElementById("sb3").style.backgroundColor='#fff';
+            document.getElementById("sb5").style.backgroundColor='#fff';
+            document.getElementById("sb1").style.width="2%";
+            document.getElementById("sb2").style.width="2%";
+            document.getElementById("sb3").style.width="2%";
+            document.getElementById("sb5").style.width="2%";
+            document.getElementById("sb4").style.width="40%";
+            document.getElementById("sb4").style.backgroundColor='#e6e8ec';
+
+        }
+       
+        function location1(){
+            document.getElementById("sb1").style.backgroundColor='#fff';
+            document.getElementById("sb2").style.backgroundColor='#fff';
+            document.getElementById("sb3").style.backgroundColor='#fff';
+            document.getElementById("sb4").style.backgroundColor='#fff';
+            document.getElementById("sb1").style.width="2%";
+            document.getElementById("sb2").style.width="2%";
+            document.getElementById("sb3").style.width="2%";
+            document.getElementById("sb4").style.width="2%";
+            document.getElementById("sb5").style.width="40%";
+            document.getElementById("sb5").style.backgroundColor='#e6e8ec';
+
+        }
+       
+    </script> 
+</head>
+<body>
+
+<h1 class="topic">Adopt a Pet you want!</h1>
+
+   <form action="search.php" method="get">
+        <div class="th1">
+        <span class="tex">Search</span>
+            <span class="serch">Type:</span>
+
+            <input id="sb1"  type="Species" name="Species" placeholder="&#128269;" onfocus="specbox1()" onfocusout="specbox2()" required>     
+            
+            <span class="serch">Breed:</span>
+
+            <input id="sb2"  type="Breed" name="Breed" placeholder="&#128269;" onfocus="brandbox1()" onfocusout="brandbox2()" required>       
+            
+            <span class="serch">Age:</span>
+
+            <input id="sb3"  type="Age " name="Age " placeholder="&#128269;" onfocus="agebox1()" onfocusout="agebox2()" required>         
+            
+            <span class="serch">Gender:</span>
+
+            <input id="sb4"  type="Gender " name="Gender " placeholder="&#128269;" onfocus="genderbox1()" onfocusout="genderbox2()" required>      
+            
+            <span class="serch">Location:</span>
+
+            <input id="sb5"  type="Location" name="Location" placeholder="&#128269;" onfocus="location1()" onfocusout="location2()" required>  
+            
+
+
+        </div>
+    </form> 
+
+<div class="it1">
+    <img src="./images/logo.jpg">
+    <table>
+    <tr><td>Type:</td></tr>
+    <tr><td>Breed:</td></tr>
+    <tr><td>Age:</td></tr>
+    <tr><td>Gender:</td></tr>
+    <tr><td>Location:</td></tr>
+</table>
+</div>
+<div class="it1">
+    <img src="./images/logo.jpg">
+    <table>
+        <tr><td>Type:</td><td>asda</td></tr>
+        <tr><td>Breed:</td></tr>
+        <tr><td>Age:</td></tr>
+        <tr><td>Gender:</td></tr>
+        <tr><td>Location:</td></tr>
+   </div>
+</body>
